@@ -1,0 +1,10 @@
+title new_note (spa)
+
+note over browser:
+Once form is submitted
+script redraws notes
+and makes request
+end note
+
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+server-->browser: {"message":"note created"}

@@ -1,0 +1,23 @@
+title single page app
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+server-->browser: HTML-code
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server-->browser: main.css
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+server-->browser: spa.js
+
+note over browser:
+Once spa.js is received browser
+starts executing script.
+Script tells browser to make
+GET request
+end note
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server-->browser: [{"content":"wopdidoo","date":"2022-10-29T11:22:54.742Z"}, ...]
+
+note over browser:
+Once request is done
+rerendering takes place
+end note
